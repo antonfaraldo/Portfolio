@@ -1,0 +1,333 @@
+/* ===================================================
+   VARIABLES GLOBALES (PALETA DE COLORES Y ESTILOS)
+   Permiten cambiar un color en toda la web desde un único sitio
+==================================================== */
+:root {
+  --bg-color: #111827;      /* Color de fondo principal: gris/azul muy oscuro */
+  --card-bg: #1f2937;       /* Color de fondo de las tarjetas y elementos */
+  --text-main: #f9fafb;     /* Color de texto principal: blanco roto */
+  --text-muted: #9ca3af;    /* Color de texto secundario: gris suave */
+  --primary: #6366f1;       /* Color de acento: índigo moderno */
+  --primary-hover: #4f46e5; /* Color del botón al pasar el cursor */
+  --border-color: #374151;  /* Color sutil para líneas y bordes */
+}
+
+/* ===================================================
+   RESET BÁSICO
+   Elimina márgenes por defecto de los navegadores
+==================================================== */
+* {
+  box-sizing: border-box; /* Incluye bordes y padding en el ancho total */
+  margin: 0;              /* Quita márgenes automáticos */
+  padding: 0;             /* Quita rellenos automáticos */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Scroll suave al pulsar en los enlaces del menú */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ===================================================
+   BARRA DE NAVEGACIÓN
+==================================================== */
+.navbar {
+  display: flex;                  /* Coloca el logo y el menú en fila horizontal */
+  justify-content: space-between; /* Envía el logo a la izquierda y el menú a la derecha */
+  align-items: center;            /* Centra verticalmente los elementos */
+  padding: 1.2rem 2rem;           /* Espaciado interno */
+  background: rgba(17, 24, 39, 0.95); /* Fondo oscuro con ligera transparencia */
+  position: sticky;              /* Hace que la barra se quede fija arriba al hacer scroll */
+  top: 0;
+  z-index: 100;                  /* Se asegura de quedar por encima de otros elementos */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;       /* Elementos de la lista en línea horizontal */
+  list-style: none;   /* Elimina los puntos de la lista */
+  gap: 1.5rem;        /* Separación fija entre cada enlace */
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none; /* Quita el subrayado a los enlaces */
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-main); /* Cambia a blanco al pasar el ratón */
+}
+
+/* ===================================================
+   HERO SECTION (PRESENTACIÓN Y FOTO)
+==================================================== */
+.hero {
+  text-align: center;
+  padding: 4.5rem 1rem 3rem;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;                 /* Recorta la imagen en un círculo perfecto */
+  object-fit: cover;                  /* Evita que la foto se deforme o aplaste */
+  border: 4px solid var(--primary);   /* Borde exterior de color índigo */
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.hero h1 span {
+  color: var(--primary); /* Resalta el nombre con el color principal */
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+/* ===================================================
+   ICONOS SOCIALES (GITHUB, LINKEDIN, MAIL)
+==================================================== */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.social-links a {
+  color: var(--text-muted);
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Efecto de elevación al poner el cursor sobre los iconos */
+.social-links a:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* ===================================================
+   BOTÓN DESCARGAR CV
+==================================================== */
+.btn-cv {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 0.75rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-cv:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* ===================================================
+   CONTENEDORES DE SECCIÓN
+==================================================== */
+.section {
+  max-width: 900px; /* Limita el ancho de lectura */
+  margin: 0 auto;   /* Centra la sección horizontalmente */
+  padding: 3rem 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+/* ===================================================
+   ICONOS DE TECNOLOGÍAS
+==================================================== */
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap; /* Pasa a la siguiente línea si la pantalla es estrecha */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2.5rem;
+  color: var(--text-muted);
+}
+
+.skill-item span {
+  font-size: 0.9rem;
+}
+
+/* ===================================================
+   TARJETAS DE PROYECTOS (GRID RESPONSIVE)
+==================================================== */
+.grid-cards {
+  display: grid;
+  /* Crea columnas automáticas de mínimo 280px que se adaptan al espacio disponible */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden; /* Corta la imagen para respetar las esquinas redondeadas */
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Se levanta 5 píxeles al pasar el ratón */
+  border-color: var(--primary);
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* Asegura que la captura rellene el espacio sin deformarse */
+}
+
+.card-body {
+  padding: 1.2rem;
+}
+
+.card-body h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card-body p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Etiquetas redondeadas de tecnologías del proyecto */
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  background: #374151;
+  color: #d1d5db;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+}
+
+.card-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* ===================================================
+   LÍNEAS DE TIEMPO (ESTUDIOS Y EXPERIENCIA)
+==================================================== */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline-item {
+  background: var(--card-bg);
+  padding: 1.2rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary); /* Barra vertical decorativa a la izquierda */
+}
+
+.study-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.study-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.timeline-item h3 {
+  font-size: 1.1rem;
+}
+
+.timeline-item .institute {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0.3rem 0 0.5rem;
+}
+
+/* ===================================================
+   PIE DE PÁGINA
+==================================================== */
+footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* ===================================================
+   ADAPTACIÓN PARA MÓVILES (PANTALLAS PEQUEÑAS)
+==================================================== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* Apila el logo y el menú en vertical */
+    gap: 0.8rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .study-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+}

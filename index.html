@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Antón Faraldo Mosquera - Estudiante de DAM</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">&lt;Antón Faraldo /&gt;</div>
+
+    <!-- Lista de enlaces de navegación -->
+    <ul class="nav-links">
+      <li><a href="#tecnologias">Tecnologías</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#estudios">Estudios</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+
+      <!-- IMAGEN DE PERFIL O AVATAR:
+           Opción 1 (Tu propia imagen descargada): pon src="assets/avatar.png"
+           Opción 2 (Imagen temporal de internet): dejamos este enlace de ejemplo -->
+      <img src="assets/images/FotoCV.jpg" 
+           alt="Foto de Antón Faraldo" 
+           class="avatar"
+           onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80'">
+
+      <!-- Nombre y apellidos del estudiante -->
+      <h1>Hola, soy <span>Antón Faraldo Mosquera</span></h1>
+
+      <!-- Subtítulo profesional enfocado a DAM -->
+      <p class="subtitle">Estudiante de 2º de DAM | Desarrollador de Aplicaciones Multiplataforma</p>
+    
+      <div class="social-links">
+        <!-- Enlace a tu perfil de GitHub -->
+        <a href="https://github.com/antonfaraldo" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <!-- Enlace a tu perfil de LinkedIn -->
+        <a href="https://linkedin.com/in/antonfarldomosquera" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+        <!-- Enlace a tu correo: al hacer clic abre la app de correo del usuario -->
+        <a href="mailto:anton.estudios.11@gmail.com" title="Enviar correo electrónico">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <a href="assets/docs/AntonFaraldoCV23_9_26.pdf" download="CV_Anton_Faraldo.pdf" class="btn-cv">
+        <i class="fas fa-download"></i> Descargar CV
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SECCIÓN DE HABILIDADES TÉCNICAS (STACK)
+         Los iconos no requieren descargas; se definen con clases FontAwesome -->
+    <section id="tecnologias" class="section">
+      <h2>Tecnologías y Herramientas</h2>
+      <div class="skills-icons">
+        <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+        <div class="skill-item"><i class="devicon-java-plain colored"></i><span>JavaFX</span></div>
+        <div class="skill-item"><i class="devicon-react-original colored"></i><span>React Native</span></div>
+        <div class="skill-item"><i class="fas fa-database"></i><span>SQL</span></div>
+        <div class="skill-item"><i class="devicon-hibernate-plain colored"></i><span>Hibernate</span></div>
+        <div class="skill-item"><i class="devicon-unity-original"></i><span>Unity</span></div>
+        <div class="skill-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+        <div class="skill-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+        <div class="skill-item"><i class="devicon-json-plain colored"></i><span>JSON</span></div>
+        <div class="skill-item"><i class="fas fa-cogs"></i><span>Odoo ERP</span></div>
+        <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+        <div class="skill-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+        <div class="skill-item"><i class="devicon-intellij-plain colored"></i><span>IntelliJ IDEA</span></div>
+        <div class="skill-item"><i class="devicon-eclipse-plain colored"></i><span>Eclipse IDE</span></div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE PROYECTOS REALIZADOS -->
+    <section id="proyectos" class="section">
+      <h2>Proyectos</h2>
+      
+      <div class="grid-cards">
+
+        <!-- TARJETA DEL PROYECTO 1 -->
+        <article class="card">
+          <!-- IMAGEN DE PREVISUALIZACIÓN:
+               Opción A: captura propia guardada en 'assets/proyecto1.png'.
+               Opción B: enlace de imagen de internet mientras pruebas (usado aquí). -->
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=600&q=80" 
+               alt="Captura de pantalla de la App Móvil" 
+               class="card-img">
+
+          <div class="card-body">
+            <h3>App de Gestión de Tareas (Android)</h3>
+            <p>Aplicación móvil desarrollada en Kotlin y Java con persistencia local mediante Room / SQLite y diseño Material 3.</p>
+            
+            <!-- Etiquetas de las tecnologías utilizadas -->
+            <div class="tags">
+              <span>Kotlin</span>
+              <span>Android</span>
+              <span>SQLite</span>
+            </div>
+
+            <!-- Enlace que lleva al repositorio del proyecto -->
+            <a href="https://github.com/tu-usuario/proyecto-android" target="_blank" rel="noopener noreferrer" class="card-link">
+              <i class="fab fa-github"></i> Ver Código en GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- TARJETA DEL PROYECTO 2 -->
+        <article class="card">
+          <!-- Imagen de prueba para el segundo proyecto -->
+          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" 
+               alt="Captura de pantalla del Proyecto de Escritorio" 
+               class="card-img">
+
+          <div class="card-body">
+            <h3>Sistema de Gestión de Clientes</h3>
+            <p>Aplicación de escritorio multiplataforma desarrollada en Java con interfaz JavaFX y conexión a base de datos MySQL.</p>
+            
+            <div class="tags">
+              <span>Java</span>
+              <span>JavaFX</span>
+              <span>MySQL</span>
+            </div>
+
+            <a href="https://github.com/tu-usuario/proyecto-escritorio" target="_blank" rel="noopener noreferrer" class="card-link">
+              <i class="fab fa-github"></i> Ver Código en GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE ESTUDIOS
+         id="estudios" coincide con el menú superior -->
+    <section id="estudios" class="section">
+      <h2>Estudios y Formación</h2>
+      
+      <div class="timeline">
+        <!-- Estudio actual (DAM) -->
+        <div class="timeline-item">
+          <div class="study-header">
+            <img src="assets/images/LogoLiceo.jpg"
+                  alt="Logo Liceo La Paz"
+                  class="study-logo"
+                  onerror="this.src='https://via.placeholder.com/60?text=Liceo' ">
+            <div>
+              <h3>C.F.G.S. Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
+              <p class="institute">Centro Educativo Liceo La Paz (A Coruña) | <em>En curso (2º año)</em></p>
+            </div>
+          </div>
+          <p>Formación orientada a desarrollo de software empresarial, desarrollo para dispositivos móviles, bases de datos, sistemas de gestión (ERP como Odoo) y diseño de interfaces.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="study-header">
+             <img src="assets/images/elvina_logo.png" 
+                  alt="Logo IES Elviña" 
+                  class="study-logo"
+                  onerror="this.src='https://via.placeholder.com/60?text=Elviña'">
+              <div>
+                <h3>Bachillerato Tecnológico</h3>
+                <p class="institute">IES Elviña (A Coruña) | <em>2022 - 2024</em></p>
+              </div>
+           </div>
+          <p>Formación académica previa orientada a bases técnicas y científicas.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Idiomas (Inglés)</h3>
+          <p class="institute">Escuela Oficial de Idiomas (EOI)</p>
+          <p>Nivel B1 certificado y actualmente cursando el nivel B2.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE EXPERIENCIA LABORAL -->
+    <section id="experiencia" class="section">
+      <h2>Experiencia</h2>
+      
+      <div class="timeline">
+        <!-- Si no tienes contratos previos, enfócalo hacia las prácticas FCT -->
+        <div class="timeline-item">
+          <h3>Búsqueda de Prácticas FCT (Desarrollador Junior)</h3>
+          <p class="institute">Periodo previsto: 2026 | Modalidad: Presencial / Remoto</p>
+          <p>Preparado para realizar la Formación en Centros de Trabajo (FCT) en puestos de desarrollo multiplataforma, soporte o desarrollo backend/móvil.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================
+       PIE DE PÁGINA (FOOTER)
+  ==================================================== -->
+  <footer id="contacto">
+    <p>Diseñado por Antón Faraldo Mosquera © 2026</p>
+  </footer>
+
+</body>
+</html>
